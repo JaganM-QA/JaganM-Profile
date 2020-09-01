@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+       <class name="scriptsmodule01.ProfileAboutMe"/>
+	  <class name="scriptsmodule01.ProfileContact"/>
+	  <class name="scriptsmodule01.ProfileResume"/>
+	  <class name="scriptsmodule01.ProfileTestimonials"/>
+	  <class name="scriptsmodule02.ProfileProjects"/>
+	  <!--class name="scriptstestingpurpose.ChildbrowserDebugging"/>-->
+	  <!--class name="scriptsmodule03.ProfileHomePageAutoSearch"/>-->
+	  <!--class name="scriptsmodule04.ProfileHomePageButtons"/>-->
+	  <!--class name="scriptsmodule05.ProfileHomePageDisabledField"/>-->
+	  <!--class name="scriptsmodule06.ProfileHomePageElements"/>-->
+      <!--class name="scriptsmodule07.ProfileHomePageFileUpload"/>-->
+	  <!--class name="scriptsmodule08.ProfileHomePageTutorials"/>-->
+	  <!--class name="scriptstestingpurpose.ProfileHomePageMultipleMethods"/>-->
+	  <!--class name="scriptstestingpurpose.ProfileTutorials"/>-->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
