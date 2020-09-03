@@ -14,36 +14,40 @@ import basicOperations.LoginOperations;
 import basicOperations.Screenshots;
 import basicOperations.SearchFunction;
 import pom.FileUploadForm;
+import pom.HomeAutoSearch;
 import pom.HomeButtons;
+import pom.HomeDisableFields;
 import pom.HomePage;
 import pom.HomePageElements;
 import pom.Tutorials;
 
 public class ProfileHomePageMultipleMethods extends LoginOperations
 {
-	@Test
+	@Test(priority=1)
 	public void ProfileHomeAutoSearch() throws InterruptedException, IOException
 	{
-		LoginOperations.LogIn();
+		 LoginOperations.LogIn();
 		ActionClass.ActionClassHome();
 		HomePage hp = new HomePage(driver);
 		hp.HomepageAutosearch();
-		ChildBrowser.ChildBrowserOpen();
+		//ChildBrowser.ChildBrowserOpen();
 		SearchFunction.AutoSearching();
 		Screenshots.screenshot();
-		ChildBrowser.ChildBrowserClose();
+		HomeAutoSearch has = new HomeAutoSearch(driver);
+		has.AutosearchHome();
+		// ChildBrowser.ChildBrowserClose();
 		hp.HomePageLogout();
-		//LoginOperations.LogOut();
+		LoginOperations.LogOut();
 	}
 	
-	@Test(enabled = false)
+	@Test(priority=2) 
  	public void ProfileHomeButton() throws InterruptedException, IOException
  	{
 		 LoginOperations.LogIn();
 		 ActionClass.ActionClassHome();
 		 HomePage hp = new HomePage(driver);
 		  hp.HomepageButtons();
-		 ChildBrowser.ChildBrowserOpen();
+		 //ChildBrowser.ChildBrowserOpen();
 		 
 		 HomeButtons hbs = new HomeButtons(driver);
 		 hbs.HomeButtonCheckButton1(); 
@@ -59,7 +63,7 @@ public class ProfileHomePageMultipleMethods extends LoginOperations
 		 LoginOperations.LogOut();
  	}
 	
-	@Test(enabled = false)
+	@Test(priority=3) 
 	public  void ProfileHomeDisabledText() throws EncryptedDocumentException, IOException, InterruptedException
 			{
 			  
@@ -67,7 +71,7 @@ public class ProfileHomePageMultipleMethods extends LoginOperations
 			 ActionClass.ActionClassHome();
 			 HomePage hp = new HomePage(driver);
 			 hp.HomepageDisabledFields();
-			 ChildBrowser.ChildBrowserOpen();
+			 //ChildBrowser.ChildBrowserOpen();
 			 
 			 JavascriptExecutor js = (JavascriptExecutor)driver;
 		     js.executeScript("document.getElementById('name').value='Jagan'");
@@ -87,11 +91,13 @@ public class ProfileHomePageMultipleMethods extends LoginOperations
 		     Thread.sleep(2000);
 		     Screenshots.screenshot();
 		   //ChildBrowser.ChildBrowserClose();
+		     HomeDisableFields hdf = new HomeDisableFields(driver);
+		     hdf.DisabledHome();
 		     hp.HomePageLogout();
 		     LoginOperations.LogOut();
 	       }
 	
-	@Test(enabled = false)
+	@Test(priority=4) 
 	 public   void ProfileHomeElementsText() throws EncryptedDocumentException, IOException, InterruptedException
 		{
 		 
@@ -99,16 +105,16 @@ public class ProfileHomePageMultipleMethods extends LoginOperations
 		 ActionClass.ActionClassHome();
 		 HomePage hp = new HomePage(driver);
 		 hp.HomepageElements();
-		 ChildBrowser.ChildBrowserOpen();
+		 //ChildBrowser.ChildBrowserOpen();
 		 SearchFunction.ElementText();
 		 HomePageElements hpe = new HomePageElements(driver);
 		 hpe.ElementHome();
-	  ChildBrowser.ChildBrowserClose();
+	  //ChildBrowser.ChildBrowserClose();
 		 hp.HomePageLogout();
 		 LoginOperations.LogOut();
      }
 	
-	@Test(enabled = false)
+	@Test(priority=5)
 	public  void ProfileHomeFileUploading() throws EncryptedDocumentException, IOException, InterruptedException
 	{
 	 
@@ -116,29 +122,30 @@ public class ProfileHomePageMultipleMethods extends LoginOperations
 		ActionClass.ActionClassHome();
 		HomePage hp = new HomePage(driver);
 		hp.HomepageFileUpload();
-		ChildBrowser.ChildBrowserOpen();
+		//ChildBrowser.ChildBrowserOpen();
 		FileUpload.FileUploadCancel();
 		Screenshots.screenshot();
 		FileUpload.FileUploadAccept();
 		Screenshots.screenshot();
 		FileUploadForm fu = new FileUploadForm(driver);
+		fu.Filename();
 		fu.FileHome();
-	ChildBrowser.ChildBrowserClose();
+	 //ChildBrowser.ChildBrowserClose();
 		hp.HomePageLogout();
 		LoginOperations.LogOut();
 	}
-	@Test(enabled = false)
+	@Test(priority=6)
 	public  void ProfileVideoTutorials() throws InterruptedException, IOException
 	{
 		LoginOperations.LogIn(); 
 		ActionClass.ActionClassHome();
 		HomePage hp = new HomePage(driver);
 		hp.HomepageTutorials();
-		ChildBrowser.ChildBrowserOpen();
+		//ChildBrowser.ChildBrowserOpen();
 		ActionClass.ActionClassVideo();
 		Tutorials tv = new Tutorials(driver);
 		tv.TutorialVideoHome();
-	   ChildBrowser.ChildBrowserClose();
+	   //ChildBrowser.ChildBrowserClose();
 	   	hp.HomePageLogout();
 		//LoginOperations.LogOut();
 

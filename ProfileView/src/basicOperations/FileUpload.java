@@ -18,7 +18,7 @@ public class FileUpload extends LoginOperations
 	Thread.sleep(1000);
 	Screenshots.screenshot();
 	Thread.sleep(1000);
-	ChildBrowser.ChildBrowserClose();
+	//ChildBrowser.ChildBrowserClose();
 	 
   }
  

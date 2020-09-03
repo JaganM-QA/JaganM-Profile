@@ -34,9 +34,9 @@ public class ProfileHomePageButtons extends LoginOperations
 		hbs.HomeButtonRadio();
 		Screenshots.screenshot();
 		hbs.ButtonHome();
-		// ChildBrowser.ChildBrowserClose();
+		ChildBrowser.ChildBrowserClose();
 		hp.HomePageLogout();
-		LoginOperations.LogOut();
+		//LoginOperations.LogOut();
 	}
 }
 

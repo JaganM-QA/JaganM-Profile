@@ -17,7 +17,7 @@ public class ProfileHomePageAutoSearch extends LoginOperations
 	@Test
 	public  void ProfileHomeAutoSearch() throws InterruptedException, IOException
 	{
-		//LoginOperations.LogIn();
+		 //LoginOperations.LogIn();
 		ActionClass.ActionClassHome();
 		HomePage hp = new HomePage(driver);
 		hp.HomepageAutosearch();
@@ -29,7 +29,7 @@ public class ProfileHomePageAutoSearch extends LoginOperations
 		has.AutosearchHome();
 		 ChildBrowser.ChildBrowserClose();
 		hp.HomePageLogout();
-		LoginOperations.LogOut();
+		//LoginOperations.LogOut();
 	}
 
 } 

@@ -14,6 +14,10 @@ public class FileUploadForm
 			@FindBy(id="custom-button")
 			private WebElement file;
 			
+			
+			@FindBy(id="custom-text")
+			private WebElement filename;
+			
 			//Windows explorer pop-up - select the file
 			
 			@FindBy(id="custom-button1")
@@ -21,6 +25,8 @@ public class FileUploadForm
 			
 			@FindBy(id="custom-button2")
 			private WebElement home;
+			
+			
 			
 			public FileUploadForm	(WebDriver driver)
 			{
@@ -34,6 +40,12 @@ public class FileUploadForm
 				file.click();
 				Thread.sleep(2000);
 				
+			}
+			
+			public void Filename() throws InterruptedException
+			{
+				filename.getText();
+				Thread.sleep(2000);
 			}
 			
 			public void FileSubmit() throws InterruptedException

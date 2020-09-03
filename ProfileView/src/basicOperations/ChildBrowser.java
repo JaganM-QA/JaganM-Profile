@@ -2,10 +2,11 @@ package basicOperations;
 
 import java.util.Set;
  
-
+ 
 public class ChildBrowser extends LoginOperations
 
-{
+	{
+	
 	public static String id = driver.getWindowHandle();
 	public static Set<String> id1 = driver.getWindowHandles();
 	public static void ChildBrowserOpen ( ) throws InterruptedException
@@ -23,10 +24,9 @@ public class ChildBrowser extends LoginOperations
 			System.out.println(title);
 		 
 		}
-		
+ 
 	}
 	
- 
 	public static void ChildBrowserClose()
 	{
 		id1.remove(id);
@@ -60,5 +60,29 @@ public class ChildBrowser extends LoginOperations
 	}
 }
 
+
+
+
+
+
+
+//public class ChildBrowser extends LoginOperations
+//{
+//	String mainWindow = driver.getWindowHandle();
+//	Set<String> set = driver.getWindowHandles();
+//	Iterator<String> itr = set.iterator();
+//	while (itr.hasNext())
+//	{
+//		String childWindow = itr.next();
+//		if(!mainWindow.equals(childWindow))
+//		{
+//			driver.switchTo().window(childWindow);
+//			System.out.println(driver.switchTo().window(childWindow).getTitle());
+//			driver.close();
+//			
+//		}
+//		driver.switchTo().window(mainWindow);
+//	}
+//}
  
  

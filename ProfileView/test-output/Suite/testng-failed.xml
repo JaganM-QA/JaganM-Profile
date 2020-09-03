@@ -3,13 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="scriptsmodule02.ProfileProjects">
+      <class name="scriptsmodule04.ProfileHomePageButtons">
         <methods>
           <include name="LogOut"/>
           <include name="LogIn"/>
-          <include name="ProjectList"/>
+          <include name="ProfileHomeButton"/>
         </methods>
-      </class> <!-- scriptsmodule02.ProfileProjects -->
+      </class> <!-- scriptsmodule04.ProfileHomePageButtons -->
+      <class name="scriptsmodule03.ProfileHomePageAutoSearch">
+        <methods>
+          <include name="LogOut"/>
+          <include name="ProfileHomeAutoSearch"/>
+          <include name="LogIn"/>
+        </methods>
+      </class> <!-- scriptsmodule03.ProfileHomePageAutoSearch -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
